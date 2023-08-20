@@ -46,7 +46,7 @@
     top: 50%;
     left: 50%;
     border-radius: 0.6em;
-    display: none;
+    
   }
   .header {
     margin-bottom: 1.8em;
@@ -55,6 +55,7 @@
     align-items: center;
     padding-bottom: 0.6em;
     border-bottom: 0.1em solid #c0bfd2;
+    margin: auto;
   }
   .timer-div {
     background-color: #e1f5fe;
@@ -110,3 +111,55 @@
     font-size: 1.5em;
     color: #ffffff;
   }
+
+  .grid{
+    background-color: #ffffff;
+    padding: 3.1em 1.8em;
+    width: 80%;
+    max-width: 37.5em;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.6em;
+  }
+
+  .grid h1{
+    font-family: sans-serif;
+    background-color: grey;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    padding: 2px 0px;
+    border-radius: 50px;
+  }
+  .grid #question{
+    font-family: sans-serif;
+    font-size: 30px;
+    color: rgb(14, 13, 13);
+  }
+  .buttons{
+    margin-top: 30px;
+
+  }
+
+  #btn0, #btn1, #btn2, #btn3{
+    
+    width: 250px;
+    font-size: 20px;
+    color: rgb(36, 35, 35);
+    /* border: 1px solid grey; */
+    /* border-radius: 50px; */
+    margin: 0px 0px 10px 0px; 
+    padding: 5px 5px;
+    background: transparent;
+    text-align: left;
+    
+  }
+  #progress{
+    color: grey;
+    font-size: 18px;
+  }
+
+

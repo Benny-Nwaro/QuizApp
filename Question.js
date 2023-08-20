@@ -1,7 +1,7 @@
 function Question(text, choices, answer){
     this.text = text;
-    this.choices;
-    this.answer;
+    this.choices = choices;
+    this.answer = answer ;
 
 }
 

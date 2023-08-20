@@ -49,27 +49,40 @@ function showScores(){
 
 //the array of questions
 const questions = [
-    {
-      id: "0",
-      question: "Which is the most widely spoken language in the world?",
-      options: ["Spanish", "Mandarin", "English", "German"],
-      correct: "Mandarin",
-    },
-    {
-      id: "1",
-      question: "Which is the only continent in the world without a desert?",
-      options: ["North America", "Asia", "Africa", "Europe"],
-      correct: "Europe",
-    },
-    {
-      id: "2",
-      question: "Who invented Computer?",
-      options: ["Charles Babbage", "Henry Luce", "Henry Babbage", "Charles Luce"],
-      correct: "Charles Babbage",
-    },
-  
+    new Question("Which is the most widely spoken language in the world?", ["Spanish", "Mandarin", "English", "German"],"Mandarin")
+
   
   ];
+
+
+  //Checker Function to check if option is correct or not
+function checker(userOption) {
+    let userSolution = userOption.innerText;
+    let question =
+      document.getElementsByClassName("container-mid")[questionCount];
+    let options = question-div.querySelectorAll(".option-div");
+  
+    //if user clicked answer == correct option stored in object
+    if (userSolution === quizArray[questionCount].correct) {
+      userOption.classList.add("correct");
+      scoreCount++;
+    } else {
+      userOption.classList.add("incorrect");
+      //For marking the correct option
+      options.forEach((element) => {
+        if (element.innerText == quizArray[questionCount].correct) {
+          element.classList.add("correct");
+        }
+      });
+    }
+  
+    //clear interval(stop timer)
+    clearInterval(countdown);
+    //disable all options
+    options.forEach((element) => {
+      element.disabled = true;
+    });
+  }
 
   var quiz = new Quiz(questions);
 
